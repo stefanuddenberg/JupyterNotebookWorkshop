@@ -1,0 +1,68 @@
+1. get anaconda
+	- on mac, need xcode: xcode-select --install
+	- can update python with: sudo conda update python 
+		- sudo conda update anadconda
+	- but just download the new anaconda and restart terminal
+	- to show hidden files on mac: defaults write com.apple.finder AppleShowAllFiles YES
+2. pip install -U -r requirements.txt 
+2.1 pip install jupyter_contrib_nbextensions
+3. jupyter contrib nbextension install --user
+4. pip install jupyterthemes
+5. jt -t grade3 -fs 12 -tfs 12 -nfs 115 -cellw 88% -T
+	5.1 jt -r # for reset
+
+
+Nbextensions I like (* must-haves):
+- table_beautifier
+- *Table of Contents (2), with auto-number, sidebar, widen display, display toc as navigation menu, move title and menu left instead of center, and collapse
+	- requires 1 edit to jupyter_nbconvert_config.py to get the markdown to display in exported HTML files
+	- can export with: jupyter nbconvert --to html_toc FILENAME.ipynb
+- Collapsible Headings, with add a control, adjust size of toggle controls, gray bracketed ellipsis, command-mode, collapse with ToC2
+- *Variable inspector
+- Codefolding
+- Navigation hotkeys
+- Chrome clipboard
+- Codefolding in editor
+- contrib_nbextensions_help_item
+- *nbextensions dashboard tab
+- *Python Markdown (must be trusted notebook to use)
+- Tree Filter
+
+
+Fonts I like:
+- Coding:
+	- Droid Sans Mono
+	- Monaco
+	- Consolas
+	- Inconsolata-g
+	- Inconsolata Regular
+
+
+Required packages:
+- jupyter
+- jupyter_contrib_nbextensions
+- matplotlib
+- mpld3
+- numpy
+- pandas
+- prettypandas
+- scipy
+- seaborn
+- statsmodels
+- wes
+
+Bonus:
+- MATLAB on jupyter notebook installation instructions
+	- Download latest version of MATLAB
+	- Get 64bit latest version of Python (3.6)
+	- Windows: cd "matlabroot\extern\engines\python"
+	- Mac: cd "matlabroot/extern/engines/python"
+	- python3 setup.py install
+	- pip3 install pymatbridge
+	- python3 -m matlab_kernel install
+		- Start MATLAB: %load_ext pymatbridge 
+		- Run MATLAB code: %matlab or %%matlab for cell
+		- exit MATLAB: %unload_ext pymatbridge
+	- requires running from Python 3 jupyter; can't do it from Python 2.7 jupyter in my case.
+- XXX R on jupyter notebook installation instructions
+- List of compatible kernels and languages: https://github.com/jupyter/jupyter/wiki/Jupyter-kernels
