@@ -5,7 +5,6 @@ mpld3
 numpy
 pandas
 prettypandas
-pymatbridge
 scipy
 seaborn
 statsmodels
