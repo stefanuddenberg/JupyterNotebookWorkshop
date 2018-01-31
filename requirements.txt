@@ -7,7 +7,7 @@ backports.shutil-get-terminal-size==1.0.0
 beautifulsoup4==4.6.0
 bitarray==0.8.1
 bkcharts==0.2
-blaze==0.11.3
+blaze
 bleach==2.0.0
 bokeh==0.12.13
 boto==2.48.0
