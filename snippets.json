@@ -1,0 +1,41 @@
+{
+    "snippets" : [
+        {
+            "name" : "Reset and import defaults",
+            "code" : [
+                "%reset -f",
+				"%matplotlib inline",
+				"%config InlineBackend.figure_format = 'retina' # High-res graphs (rendered irrelevant by svg option below)",
+				"%config InlineBackend.print_figure_kwargs = {'bbox_inches':'tight'} # No extra white space",
+				"%config InlineBackend.figure_format = 'svg' # 'png' is default",
+				"",
+				"import warnings",
+				"warnings.filterwarnings('ignore') # Because we are adults",
+				"import matplotlib.pyplot as plt",
+				"import pandas as pd",
+				"import seaborn as sns"
+            ]
+        },
+        {
+            "name" : "HTML -- Youtube iframe",
+            "code" : [
+                "%%HTML",
+                "<iframe width='560' height='315' src='https://www.youtube.com/embed/HW29067qVWk' frameborder='0' allowfullscreen></iframe>"
+            ]
+        },
+        {
+            "name" : "HTML -- generic iframe",
+            "code" : [
+                "%%HTML",
+                "<iframe src='https://fiddle.jshell.net/rahonavis75/ed4486f9/show/' width='800' height='500'>"
+            ]
+        },
+        {
+            "name" : "Stats -- Cohen's d",
+            "code" : [
+                "def cohens_d(t, n):",
+    			"    return 2*t / sqrt(n - 2)"
+            ]
+        }
+    ]
+}
