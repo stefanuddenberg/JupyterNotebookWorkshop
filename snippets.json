@@ -11,7 +11,9 @@
 				"",
 				"import warnings",
 				"warnings.filterwarnings('ignore') # Because we are adults",
-				"import matplotlib.pyplot as plt",
+				"from IPython.core.debugger import set_trace",
+                "import matplotlib.pyplot as plt",
+                "import numpy as np",
 				"import pandas as pd",
 				"import seaborn as sns"
             ]
@@ -35,6 +37,42 @@
             "code" : [
                 "def cohens_d(t, n):",
     			"    return 2*t / sqrt(n - 2)"
+            ]
+        },
+        {
+            "name" : "Stats -- Cohen's d 1-sample",
+            "code" : [
+                "def cohens_d_1samp(m, sd, test):",
+                "    '''",
+                "    Return Cohen's d for a one-sample t-test.",
+                "    Takes a mean (m), SD (sd), and a test value (test.",
+                "    '''",
+                "    md = m - test",
+                "    return md/sd"
+            ]
+        },
+        {
+            "name" : "Stats -- Confidence interval",
+            "code" : [
+                "def confidence_interval(arr, conf=0.95):",
+                "    mean = np.mean(arr, axis=1)",
+                "    sem = stats.sem(arr, axis=1)",
+                "    tcl = stats.t.ppf((1+conf)/2., max(arr.shape)-1) # for 0.95, needs to be 0.975",
+                "    return (mean - tcl*sem, mean + tcl*sem)"
+            ]
+        },
+        {
+            "name" : "Formatting tables",
+            "code" : [
+                "def color_significant_green(val, alpha=0.05):",
+                "    if val < alpha: color = 'green'",
+                "    else: color = 'black'",
+                "    return 'color: %s' % color",
+                "",
+                "def bold_significant(val, alpha=0.05):",
+                "    if val < alpha: font_weight = 'bold'",
+                "    else: font_weight = 'normal'",
+                "    return 'font-weight: %s' % font_weight"
             ]
         }
     ]

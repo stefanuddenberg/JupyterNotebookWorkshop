@@ -2009,7 +2009,7 @@ div.rendered_html h5 {
  font-size: 200%;
  text-align: center;
  font-style: normal;
- font-weight: lighter;
+ font-weight: bold; /* lighter */
 }
 .rendered_html h2,
 .text_cell_render h2 {
@@ -2017,28 +2017,28 @@ div.rendered_html h5 {
  font-size: 170%;
  color: #126dce;
  font-style: normal;
- font-weight: lighter;
+ font-weight: bold; /* lighter */
 }
 .rendered_html h3,
 .text_cell_render h3 {
  font-size: 140%;
  color: #126dce;
  font-style: normal;
- font-weight: lighter;
+ font-weight: bold; /* lighter */
 }
 .rendered_html h4,
 .text_cell_render h4 {
  font-size: 110%;
  color: #126dce;
  font-style: normal;
- font-weight: lighter;
+ font-weight: bold; /* lighter */
 }
 .rendered_html h5,
 .text_cell_render h5 {
  font-size: 100%;
  color: #2f2f2f;
  font-style: normal;
- font-weight: lighter;
+ font-weight: bold; /* lighter */
 }
 hr {
  margin-top: 8px;
